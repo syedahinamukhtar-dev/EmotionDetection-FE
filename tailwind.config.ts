@@ -27,7 +27,7 @@ const config: Config = {
         surprise: "#f97316",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
       },
     },
   },
