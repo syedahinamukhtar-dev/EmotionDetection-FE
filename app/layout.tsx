@@ -3,7 +3,8 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "FaceEmotion AI | FER2013 Demo",
-  description: "Deep learning facial expression recognition with CustomCNN · MS Data Science project demo.",
+  description:
+    "Facial expression recognition by Syeda Hina Mukhtar — CustomCNN on FER2013 · MS Data Science project.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
