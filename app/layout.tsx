@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { AiBackground } from "./components/AiBackground"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -18,7 +19,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <AiBackground />
+        <div className="relative z-0">{children}</div>
+      </body>
     </html>
   )
 }

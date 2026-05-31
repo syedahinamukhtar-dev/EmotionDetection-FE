@@ -55,7 +55,7 @@ export function ModelInsights() {
   ]
 
   return (
-    <section className="mt-20 rounded-2xl border border-border bg-card p-6 md:p-10">
+    <section className="mt-20 rounded-2xl border border-border bg-card/75 p-6 backdrop-blur-md md:p-10">
       <h2 className="text-xl font-semibold text-text md:text-2xl">Model Insights</h2>
       <p className="mt-1 text-sm text-muted">Training artifacts and interpretability from the FER2013 run.</p>
 

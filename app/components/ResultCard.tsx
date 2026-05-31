@@ -18,7 +18,7 @@ export interface ResultCardProps {
 export function ResultCard({ result, isLoading, onReset }: ResultCardProps) {
   if (isLoading) {
     return (
-      <div className="animate-pulse rounded-2xl border border-border bg-card p-8 shadow-lg">
+      <div className="animate-pulse rounded-2xl border border-border bg-card/75 p-8 shadow-lg backdrop-blur-md">
         <div className="mx-auto mb-4 h-24 w-24 rounded-full bg-border" />
         <div className="mx-auto mb-2 h-8 w-40 rounded bg-border" />
         <div className="mx-auto h-4 w-28 rounded bg-border" />
@@ -54,7 +54,7 @@ export function ResultCard({ result, isLoading, onReset }: ResultCardProps) {
   return (
     <div
       className={clsx(
-        "rounded-2xl border border-border bg-card p-8 shadow-xl",
+        "rounded-2xl border border-border bg-card/75 p-8 shadow-xl backdrop-blur-md",
         "animate-in fade-in zoom-in-95 duration-500",
       )}
     >

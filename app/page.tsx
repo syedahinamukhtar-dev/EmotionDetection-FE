@@ -1,7 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useState } from "react"
-import { Brain, Github, Loader2 } from "lucide-react"
+import { Brain, Loader2 } from "lucide-react"
 import { UploadZone } from "./components/UploadZone"
 import { ResultCard } from "./components/ResultCard"
 import { LiveCamera } from "./components/LiveCamera"
@@ -9,8 +9,6 @@ import { ModelInsights } from "./components/ModelInsights"
 import { getModelInfo, predictEmotion } from "@/lib/api"
 import type { PredictionResponse } from "@/types"
 
-const GITHUB_FE = "https://github.com/syedahinamukhtar-dev/EmotionDetection-FE"
-const GITHUB_BE = "https://github.com/syedahinamukhtar-dev/EmotionDetection-BE"
 const AUTHOR = "Syeda Hina Mukhtar"
 
 type MainTab = "upload" | "camera"
@@ -92,7 +90,7 @@ export default function HomePage() {
   )
 
   return (
-    <div className="min-h-screen bg-background pb-16">
+    <div className="min-h-screen pb-16">
       <div className="mx-auto max-w-5xl px-4 pt-10 md:px-6">
         <header className="flex flex-col gap-6 border-b border-border pb-8 md:flex-row md:items-start md:justify-between">
           <div>
@@ -108,26 +106,6 @@ export default function HomePage() {
               <span className="font-semibold text-primary">{AUTHOR}</span>
               <span className="text-muted"> · MS Data Science</span>
             </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                href={GITHUB_FE}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-text transition hover:border-primary/50 hover:bg-card/80"
-              >
-                <Github className="h-4 w-4 text-primary" aria-hidden />
-                Frontend Repo
-              </a>
-              <a
-                href={GITHUB_BE}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-text transition hover:border-primary/50 hover:bg-card/80"
-              >
-                <Github className="h-4 w-4 text-primary" aria-hidden />
-                Backend Repo
-              </a>
-            </div>
           </div>
           <div className="flex flex-col items-start gap-2 md:items-end">
             <span className="rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-text md:text-sm">
@@ -137,7 +115,7 @@ export default function HomePage() {
         </header>
 
         <section className="mt-12">
-          <div className="mb-6 flex rounded-xl border border-border bg-card/50 p-1">
+          <div className="mb-6 flex rounded-xl border border-border bg-card/60 p-1 backdrop-blur-md">
             <button
               type="button"
               onClick={() => setMainTab("upload")}
@@ -213,26 +191,6 @@ export default function HomePage() {
             © {new Date().getFullYear()} {AUTHOR} · FaceEmotion AI
           </p>
           <p className="mt-2">Built with PyTorch · FastAPI · Next.js · FER2013 Dataset</p>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={GITHUB_FE}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-text transition hover:border-primary/50"
-            >
-              <Github className="h-3.5 w-3.5 text-primary" aria-hidden />
-              EmotionDetection-FE
-            </a>
-            <a
-              href={GITHUB_BE}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-text transition hover:border-primary/50"
-            >
-              <Github className="h-3.5 w-3.5 text-primary" aria-hidden />
-              EmotionDetection-BE
-            </a>
-          </div>
         </footer>
       </div>
     </div>

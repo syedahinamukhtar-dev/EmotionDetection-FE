@@ -75,7 +75,7 @@ export function UploadZone({ onImageSelected }: UploadZoneProps) {
           "cursor-pointer rounded-2xl border-2 border-dashed p-10 text-center transition-all duration-300",
           dragActive
             ? "border-primary bg-primary/10 shadow-[0_0_0_1px_rgba(108,99,255,0.35)]"
-            : "border-border bg-card/40 hover:border-primary/60 hover:bg-card",
+            : "border-border bg-card/50 backdrop-blur-md hover:border-primary/60 hover:bg-card/70",
         )}
       >
         <input
