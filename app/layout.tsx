@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "FaceEmotion AI | FER2013 Demo",
+  title: "FaceEmotion AI | FER2013",
   description:
     "Facial expression recognition by Syeda Hina Mukhtar — CustomCNN on FER2013 · MS Data Science project.",
 }
